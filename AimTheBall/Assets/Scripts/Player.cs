@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Audio;
 public class Player : MonoBehaviour
 {
+    AudioSource sound;
     Rigidbody2D PlayerBody;
     public PowerSlider slider;
     public AngleDeviser angle;
-    bool MovementStarted = false;
+    public bool MovementStarted = false;
     bool PowerAccquired = false;
     float SliderVal;
     public GameObject AngleDeviser;
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         PlayerBody = GetComponent<Rigidbody2D>();
+        sound = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -34,12 +36,16 @@ public class Player : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0) && !MovementStarted)
         {
-            //This gets us the force to push the ball 
+            //This gets us the force to push the ball
             SliderVal = slider.GetPowerValue();
             PowerAccquired = true;
             //Deleting stuff
             Destroy(PowerBar);
             AngleDeviser.SetActive(true);
         }
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        sound.Play();
     }
 }
