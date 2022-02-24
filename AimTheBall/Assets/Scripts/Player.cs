@@ -8,6 +8,10 @@ public class Player : MonoBehaviour
     public PowerSlider slider;
     public AngleDeviser angle;
     bool MovementStarted = false;
+    bool PowerAccquired = false;
+    float SliderVal;
+    public GameObject AngleDeviser;
+    public GameObject PowerBar;
     [Header("Player Settings : ")]
     public float Friction;
     // Start is called before the first frame update
@@ -17,20 +21,25 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-        PlayerBody.drag = Friction;
-        if (Input.GetMouseButtonDown(0) && !MovementStarted)
+        PlayerBody.drag = Friction; //This applies friction
+        if (Input.GetMouseButtonDown(0) && !MovementStarted && PowerAccquired)
         {
-            float SliderVal = slider.GetPowerValue();
+            //This gets us the angle and we start applying force
             float Angle = angle.GetAngle();
             float powerY = Angle / 100 * SliderVal;
             float powerX = SliderVal - powerY;
-            MovementStarted = true;
             PlayerBody.AddForce(new Vector2(powerX, powerY));
-            //Deleting stuff
-            GameObject PowerBar = GameObject.Find("PowerBar");
-            GameObject AngleDeviser = GameObject.Find("AngleDeviser");
             Destroy(AngleDeviser);
+            MovementStarted = true;
+        }
+        if (Input.GetMouseButtonDown(0) && !MovementStarted)
+        {
+            //This gets us the force to push the ball 
+            SliderVal = slider.GetPowerValue();
+            PowerAccquired = true;
+            //Deleting stuff
             Destroy(PowerBar);
+            AngleDeviser.SetActive(true);
         }
     }
 }

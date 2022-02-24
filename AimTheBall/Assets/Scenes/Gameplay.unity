@@ -682,6 +682,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 938582363}
   angle: {fileID: 1068774203}
+  AngleDeviser: {fileID: 1068774201}
+  PowerBar: {fileID: 938582361}
   Friction: 0.3
 --- !u!58 &820847883
 CircleCollider2D:
@@ -1034,7 +1036,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1068774202
 Transform:
   m_ObjectHideFlags: 0
