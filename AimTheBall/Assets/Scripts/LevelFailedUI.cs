@@ -6,7 +6,7 @@ public class LevelFailedUI : MonoBehaviour
 {
     public void RetryFunction()
     {
-        SceneManager.LoadScene("Gameplay");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void BackToMenu()
     {
