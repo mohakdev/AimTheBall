@@ -1,0 +1,11 @@
+How To Create New Levels and Interagate them in Game ??
+1] First Create a Scene Named the same as level number eg if making level 9 
+name the scene "9".
+2] In Main Menu Scene Inside Level Selection Gameobject there is a setting called max levels
+set it to number of levels there are in game eg if there are 9 levels in game set it to "9".
+4] Before editing the project whatever the last level was inside its Canvas there is a gameobject called 
+LevelCleared inside that there is a setting called Last Level set that to False.
+[Only do this if you are adding more levels after that level]
+3] Also in the last level inside Canvas there is a gameobject called LevelCleared inside that 
+there is a setting called Last Level set that to true[Only do this for last level and not for all levels]
+

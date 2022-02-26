@@ -24,11 +24,11 @@ public class PowerSlider : MonoBehaviour
         }
         if (Incrementing == true)
         {
-            PowerVal += 1;
+            PowerVal += 4;
         }
         else
         {
-            PowerVal -= 1;
+            PowerVal -= 4;
         }
         MySlider.value = PowerVal;
     }

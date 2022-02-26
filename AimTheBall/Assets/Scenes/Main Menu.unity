@@ -1395,7 +1395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b180e91553ff934ca2204ce26ef2d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TotalLevels: 8
+  TotalLevels: 7
   LevelButton: {fileID: 455797644}
   LevelGrid: {fileID: 1101637007}
 --- !u!1 &962184170

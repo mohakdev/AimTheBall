@@ -6,12 +6,20 @@ using System;
 public class LevelClearedUI : MonoBehaviour
 {
     string NextScene;
+    public bool isLastLevel;
     public void LoadNextLevel()
     {
         int SceneName = int.Parse(SceneManager.GetActiveScene().name);
         int NextLevelName = SceneName + 1;
         NextScene = NextLevelName.ToString();
-        SceneManager.LoadScene(NextScene);
+        if (!isLastLevel)
+        {
+            SceneManager.LoadScene(NextScene);
+        }
+        else
+        {
+            print(isLastLevel);
+        }
     }
     public void BackToMenu()
     {
