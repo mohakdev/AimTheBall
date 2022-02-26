@@ -4,15 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenuScript : MonoBehaviour
 {
-    public GameObject LevelSelect;
-    public void PlayGame()
-    {
-        gameObject.SetActive(false);
-        LevelSelect.SetActive(true);
-    }
-
     public void QuitGame()
     {
         Application.Quit();
+    }
+    public void ResetData()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }
