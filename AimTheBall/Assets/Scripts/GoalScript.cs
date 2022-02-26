@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GoalScript : MonoBehaviour
 {
+    int LevelUnlocked;
     Player PlayerScript;
     Rigidbody2D RigidbodyPlayer;
     public GameObject Player;
@@ -24,6 +25,9 @@ public class GoalScript : MonoBehaviour
             RigidbodyPlayer.velocity = new Vector2(0, 0);
             LevelCleared.SetActive(true);
             LevelPassed = true;
+            LevelUnlocked = PlayerPrefs.GetInt("LevelUnlocked", 1);
+            LevelUnlocked += 1;
+            PlayerPrefs.SetInt("LevelUnlocked", LevelUnlocked);
         }
     }
     IEnumerator IfPlayerStopped()
