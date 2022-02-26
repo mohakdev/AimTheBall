@@ -26,8 +26,13 @@ public class GoalScript : MonoBehaviour
             LevelCleared.SetActive(true);
             LevelPassed = true;
             LevelUnlocked = PlayerPrefs.GetInt("LevelUnlocked", 1);
-            LevelUnlocked += 1;
-            PlayerPrefs.SetInt("LevelUnlocked", LevelUnlocked);
+            int SceneName = int.Parse(SceneManager.GetActiveScene().name);
+
+            if (LevelUnlocked.Equals(SceneName))
+            {
+                LevelUnlocked += 1;
+                PlayerPrefs.SetInt("LevelUnlocked", LevelUnlocked);
+            }
         }
     }
     IEnumerator IfPlayerStopped()
