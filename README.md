@@ -9,8 +9,10 @@
 
 ---
 ![Screenshots](https://i.imgur.com/2wJLKBV.png)
-
-
+![MainMenu](https://i.imgur.com/MdFEXDm.jpeg)
+![Gameplay1](https://i.imgur.com/Rj1HrGs.jpeg)
+![Gameplay2](https://i.imgur.com/I2sHRiF.jpeg)
+![Select Level](https://i.imgur.com/9TbMvrU.jpeg)
 
 ---
 ![How To Download](https://i.imgur.com/if6hyO7.png)
@@ -20,4 +22,4 @@
 
 
 
-[![Download the Game](https://i.imgur.com/fviDXfc.png)](https://radiantgames.itch.io)
+[![Download the Game](https://i.imgur.com/fviDXfc.png)](https://radiantgames.itch.io/aim-the-ball)
