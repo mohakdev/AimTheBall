@@ -8,7 +8,7 @@ public class AngleDeviser : MonoBehaviour
     public int MaxAngle;
     public int MinAngle;
     public float CurrentAngle;
-    public float AngleChangePerFrame;
+    float AngleChangePerFrame = 0.5f;
     public bool Incrementing;
     void Start()
     {
